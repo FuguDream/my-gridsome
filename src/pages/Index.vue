@@ -9,7 +9,7 @@
 
     <div class="project-list">
       <g-link class="projects-list-item" v-for="edge of $page.projects.edges" :key="edge.node.id" :to="'/project/' + edge.node.id">
-        <img :src="GRIDSOME_API_URL + edge.node.photo.url">
+        <img :src="'/img' + edge.node.photo.url">
         <h4>{{edge.node.title}}</h4>
         <p>
           <span v-for="category of edge.node.categories" :key="category.id">{{category.category}}&nbsp;&nbsp;</span>
@@ -68,7 +68,7 @@ query {
 <script>
 export default {
   metaInfo: {
-    title: ''
+    title: 'Home'
   }
 }
 </script>

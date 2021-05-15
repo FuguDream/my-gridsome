@@ -42,7 +42,7 @@ export default {
   methods: {
     async submit() {
       try {
-        await axios.post(this.GRIDSOME_API_URL + '/contacts', this.contact)
+        await axios.post('/strapiproxy' + '/contacts', this.contact)
         console.log('发送消息成功！')
       } catch (error) {
         console.log('发送消息失败！')

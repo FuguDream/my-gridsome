@@ -5,7 +5,7 @@ module.exports = (req, res) => {
   let target = ''
 
   // 处理代理目标地址
-  if (req.url.includes('/img')) {
+  if (req.url.includes('/strapiproxy')) {
     target = 'http://113.31.105.41:1337'
   }
 
@@ -14,7 +14,7 @@ module.exports = (req, res) => {
     target,
     changeOrigin: true,
     pathRewrite: {
-      '^/img/': '/'
+      '^/strapiproxy/': '/'
     }
   })(req, res)
 }

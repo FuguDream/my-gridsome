@@ -16,7 +16,7 @@
       </div>
       <div class="main" v-if="$page.project.introduction" v-html="mdToHtml($page.project.introduction)"></div>
       <p style="margin-top: 1.2rem">
-        <img :src="'/img' + $page.project.photo.url">
+        <img :src="'/strapiproxy' + $page.project.photo.url">
       </p>
     </div>
   </Layout>
